@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+
+\title{Hoja de Referencia}
+\author{Juan Diego Bermudez 31.608.369}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+
+\textbf{Instrucción | Formato | Ejemplo | Significado}
+\begin{enumerate}
+    \item add | Suma | R | add \$s1,\$s2,\$s3  | \$s1 = \$s2 + \$s3
+    \item addi | Suma Inmediata | I | addi \$s1,\$s2,100 | \$s1 = \$s2 – \$s3
+    \item lw | Cargar Palabra | I | lw \$s1,100(\$s2) | \$s1 = Memory[\$s2 + 100]
+    \item sw | Guardar Palabra | I | sw \$s1,100(\$s2) | Memory[\$s2 + 100] = \$s1
+    \item and | Y Lógico | R | and \$s1,\$s2,\$s3 | \$s1 = \$s2 \& \$s3
+    
+
+    \item or | O Lógico | R | or \$s1,\$s2,\$s3 | \$s1 = \$s2 | \$s3
+    \item sll | Desplazamiento Lógico a la izquierda | R | sll \$s1,\$s2,10 | \$s1 = \$s2 << 10
+    \item beq | Salto Si Igual | I | beq \$s1,\$s2,L | if (\$s1 == \$s2) go to L PC + 4 + 100
+    \item bne | Salto Si Distinto | I | bne \$s1,\$s2,L | if (\$s1 != \$s2) go to L PC + 4 + 100
+    \item slt | Fijar Si Menor Que | R | slt \$s1,\$s2,\$s3 | if (\$s2 < \$s3) \$s1 = 1; else \$s1 = 0
+    \item slti | Fijar Si Menor Que Inm | I | slt \$s1,\$s2,100 | if (\$s2 < 100) \$s1 = 1; else \$s1 = 0
+    \item j | Salto Incondicional | J | j 2500 | go to 10000
+\end{enumerate}
+
+\end{document}
