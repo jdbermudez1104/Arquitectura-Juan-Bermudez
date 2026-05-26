@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+
+\title{\textbf{Hoja de Referencia Prestaciones}}
+\author{Juan Diego Bermudez 31.608.369}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Fórmulas Generales de Prestaciones y Tiempo}
+La medida base de las prestaciones es el tiempo de ejecución, y ambas son recíprocas.
+
+\begin{center}
+$\text{Prestaciones}_X = \frac{1}{\text{Tiempo de ejecución}_X}$
+\end{center}
+
+\begin{center}
+$\frac{\text{Prestaciones}_X}{\text{Prestaciones}_Y} = \frac{\text{Tiempo de Ejeción }_X}{\text{Tiempo de Ejecución}_Y}$
+\end{center}
+
+\section{Ecuación Clásica de Prestaciones de la CPU}
+Esta fórmula desglosa el tiempo de ejecución en tres factores críticos:
+
+Tiempo de ejecución de CPU: \textit{Número de instrucciones × CPI ×Tiempo de ciclo de reloj}
+
+\begin{center}
+$\frac{\text{Número de instrucciones×CPI}}{\text{Frecuencia de Reloj}}$
+\end{center}
+
+Ciclos de reloj de CPU: Instrucciones del programa×Media de ciclos por instrucción (CPI)
+
+CPI (Ciclos por instrucción):
+\begin{center}
+CPI = $\frac{\text{Ciclos de reloj de la CPU}}{\text{Número de Instrucciones}}$
+\end{center}
+IPC (Instrucciones por ciclo): 
+\begin{center}
+IPC = $\frac{1}{\text{CPI}}$
+\end{center}
+
+\section{Tiempo de CPU para un programa}
+$$\text{Tiempo de CPU} = \text{Recuento de Instrucciones} \times \text{Tiempo de Ciclo de Reloj}$$
+
+$$\text{Tiempo de CPU} = \frac{\text{Recuento de instrucciones} \times \text{CPI}}{\text{Frecuencia de Reloj}}$$
+
+\section{Rendimiento Relativo}
+$$\text{Rendimiento} = \frac{1}{\text{Tiempo de Ejecución}}$$
+
+$$\frac{\text{Rendimiento}_A}{\text{Rendimiento}_B} = \frac{\text{Tiempo de Ejecución}_B}{\text{Tiempo de Ejecución}_A} = n$$
+
+\section{Ciclos de Reloj Totales de CPU}
+
+$$\text{Ciclos del CPU} = \sum_{i=1}^{n} (CPI_i \times \text{Recuento de Instrucciones}_i)$$
+
+\section{CPI Global o Promedio}
+$$\text{CPI Global} = \frac{\text{Ciclos de CPU totales}}{\text{Recuento Total de Instrucciones}} = \sum_{i=1}^{n} \left( CPI_i \times \frac{\text{Recuento de Instrucciones}_i}{\text{Recuento Total de Instrucciones}} \right)$$
+
+\section{Ley de Amdahl (Límite del Rendimiento)}
+$$\text{Tiempo Nuevo} = \text{Tiempo Viejo} \times \left[ (1 - \text{Fracción Mejorada}) + \frac{\text{Fracción Mejorada}}{\text{Factor de Mejora}} \right]$$
+
+
+\end{document}
